@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="logo" href="../../public/img/perfilhexa.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/{{style}}">
+    <title>Eduardo Azevedo Portfolio</title>
+</head>
+
+<body>
+    <div class="container">
+        {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+        {{else}}
+
+        {{/if}}
+        {{>_msg}}
+        {{{body}}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/7feb12d556.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.mailgun.org",
+                Username: "postmaster@sandboxc9e5de7bd0224427a7d4131057bdf1a6.mailgun.org",
+                Password: "438dfb842361bb85417f9c4f6a875a4f-5d9bd83c-e128df91",
+                To: 'eduardoazevedo08@gmail.com',
+                From: document.getElementById('email').value,
+                Subject: document.getElementById('assunto').value,
+                Body: document.getElementById('mensagem').value
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+    <script src="/js/{{script}}"></script>
+</body>
+
+</html>
