@@ -1,0 +1,41 @@
+{{>demo-nav}}
+<div class="ecom-shell" id="search-page" data-term="{{searchTerm}}">
+    <header class="topbar compact">
+        <div class="brand-area">
+            <a href="/demo/ecommerce/live" class="brand-logo">Aurora<span>Shop</span></a>
+            <span class="brand-badge">Demo</span>
+        </div>
+        <form class="search-bar" id="search-form">
+            <i class='bx bx-search'></i>
+            <input type="search" id="search-input" name="q" value="{{searchTerm}}" placeholder="Buscar produtos" autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="top-actions">
+            <a class="icon-btn" href="/demo/ecommerce/favoritos" title="Favoritos">
+                <i class='bx bx-heart'></i>
+                <span class="pill" id="fav-count">0</span>
+            </a>
+            <a class="icon-btn" href="/demo/ecommerce/cart" title="Carrinho">
+                <i class='bx bx-cart'></i>
+                <span class="pill" id="cart-count">0</span>
+            </a>
+            <a class="account-btn" href="/demo/ecommerce/login">
+                <i class='bx bx-user-circle'></i>
+                <span id="account-label">Minha Conta</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">Busca</p>
+                <h2>Resultados para "{{searchTerm}}"</h2>
+            </div>
+            <a class="link" href="/demo/ecommerce/products">Voltar para catálogo</a>
+        </div>
+        <div class="grid products-grid" id="search-results-grid">
+            <div class="empty">Digite algo para pesquisar produtos.</div>
+        </div>
+    </section>
+</div>

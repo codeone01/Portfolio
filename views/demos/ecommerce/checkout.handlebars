@@ -1,0 +1,93 @@
+{{>demo-nav}}
+<div class="ecom-shell">
+    <header class="topbar compact">
+        <div class="brand-area">
+            <a href="/demo/ecommerce/live" class="brand-logo">Aurora<span>Shop</span></a>
+            <span class="brand-badge">Demo</span>
+        </div>
+        <form class="search-bar" id="search-form">
+            <i class='bx bx-search'></i>
+            <input type="search" id="search-input" placeholder="Buscar produtos" autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="top-actions">
+            <a class="icon-btn" href="/demo/ecommerce/favoritos" title="Favoritos">
+                <i class='bx bx-heart'></i>
+                <span class="pill" id="fav-count">0</span>
+            </a>
+            <a class="icon-btn" href="/demo/ecommerce/cart" title="Carrinho">
+                <i class='bx bx-cart'></i>
+                <span class="pill" id="cart-count">0</span>
+            </a>
+            <a class="account-btn" href="/demo/ecommerce/login">
+                <i class='bx bx-user-circle'></i>
+                <span id="account-label">Minha Conta</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="section dual">
+        <div class="card form-card">
+            <p class="eyebrow">Checkout</p>
+            <h3>Pagamento rápido (demo)</h3>
+            <form id="checkout-form">
+                <label>Nome completo
+                    <input type="text" name="nome" required placeholder="Maria Silva">
+                </label>
+                <label>E-mail
+                    <input type="email" name="email" required placeholder="email@exemplo.com">
+                </label>
+                <label>Endereço de entrega
+                    <input type="text" name="endereco" required placeholder="Rua, número, complemento">
+                </label>
+                <div class="split">
+                    <label>CEP
+                        <input type="text" name="cep" required placeholder="00000-000">
+                    </label>
+                    <label>Cidade
+                        <input type="text" name="cidade" required placeholder="São Paulo">
+                    </label>
+                    <label>UF
+                        <input type="text" name="uf" required maxlength="2" placeholder="SP">
+                    </label>
+                </div>
+                <div class="payment-tabs">
+                    <button type="button" class="tab active" data-pay="card">Cartão</button>
+                    <button type="button" class="tab" data-pay="pix">Pix</button>
+                    <button type="button" class="tab" data-pay="boleto">Boleto</button>
+                </div>
+                <div class="pay-panel" data-panel="card">
+                    <label>Número do cartão (teste)
+                        <input type="text" name="card" placeholder="4111 1111 1111 1111">
+                    </label>
+                    <div class="split">
+                        <label>Validade
+                            <input type="text" name="validade" placeholder="12/27">
+                        </label>
+                        <label>CVV
+                            <input type="text" name="cvv" placeholder="123">
+                        </label>
+                    </div>
+                </div>
+                <div class="pay-panel hidden" data-panel="pix">
+                    <p>QR Code/Pix copia e cola será gerado automaticamente para este pedido demo.</p>
+                </div>
+                <div class="pay-panel hidden" data-panel="boleto">
+                    <p>Um boleto fictício será mostrado com vencimento em 3 dias.</p>
+                </div>
+                <button class="btn primary full" type="submit">Confirmar pagamento demo</button>
+                <div class="feedback" id="checkout-feedback"></div>
+            </form>
+        </div>
+        <div class="card summary-card">
+            <p class="eyebrow">Resumo</p>
+            <h3>Pedido simulado</h3>
+            <div id="checkout-summary"></div>
+            <div class="summary-total">
+                <span>Total estimado</span>
+                <strong id="checkout-total">R$ 0,00</strong>
+            </div>
+            <p class="note">Dados são fictícios e ficam salvos no localStorage para você testar a UX.</p>
+        </div>
+    </section>
+</div>

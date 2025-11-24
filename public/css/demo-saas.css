@@ -1,0 +1,35 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: #0f172a;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto !important;
+    padding: 16px 16px 48px;
+}
+
+/* Neutraliza estilos antigos do dashboard/login herdados deste arquivo */
+.saas-theme,
+.saas-dashboard-theme,
+.sidebar,
+.main-content,
+.login-card,
+.stats-grid,
+.stat-card {
+    all: unset;
+}

@@ -1,0 +1,55 @@
+{{>demo-nav}}
+<div class="ecom-shell">
+    <header class="topbar compact">
+        <div class="brand-area">
+            <a href="/demo/ecommerce/live" class="brand-logo">Aurora<span>Shop</span></a>
+            <span class="brand-badge">Demo</span>
+        </div>
+        <form class="search-bar" id="search-form">
+            <i class='bx bx-search'></i>
+            <input type="search" id="search-input" placeholder="Buscar produtos" autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="top-actions">
+            <a class="icon-btn" href="/demo/ecommerce/favoritos" title="Favoritos">
+                <i class='bx bx-heart'></i>
+                <span class="pill" id="fav-count">0</span>
+            </a>
+            <a class="icon-btn" href="/demo/ecommerce/cart" title="Carrinho">
+                <i class='bx bx-cart'></i>
+                <span class="pill" id="cart-count">0</span>
+            </a>
+            <a class="account-btn" href="/demo/ecommerce/login">
+                <i class='bx bx-user-circle'></i>
+                <span id="account-label">Minha Conta</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="section dual">
+        <div class="card form-card">
+            <p class="eyebrow">Conta</p>
+            <h3>Login / Cadastro (demo)</h3>
+            <form id="login-form">
+                <label>Nome completo
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                </label>
+                <label>E-mail
+                    <input type="email" name="email" placeholder="voce@email.com" required>
+                </label>
+                <label>Senha
+                    <input type="password" name="senha" placeholder="••••••" required>
+                </label>
+                <button class="btn primary full" type="submit">Entrar / Criar conta demo</button>
+                <div class="feedback" id="login-feedback"></div>
+            </form>
+        </div>
+        <div class="card history-card">
+            <p class="eyebrow">Histórico</p>
+            <h3>Últimas compras</h3>
+            <div id="orders-list">
+                <div class="empty">Sem pedidos ainda. Conclua um checkout demo para gerar um número de pedido.</div>
+            </div>
+        </div>
+    </section>
+</div>

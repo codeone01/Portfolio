@@ -1,0 +1,619 @@
+{{> demo-nav}}
+
+<!-- Header -->
+<header class="header">
+    <div class="barber-container">
+        <a href="#" class="logo">Elite<span style="color: #fff">Prime</span></a>
+        <nav class="nav-menu">
+            <a href="#home" class="nav-link">Início</a>
+            <a href="#about" class="nav-link">Sobre</a>
+            <a href="#services" class="nav-link">Serviços</a>
+            <a href="#barbers" class="nav-link">Barbeiros</a>
+            <a href="#gallery" class="nav-link">Galeria</a>
+            <a href="#contact" class="nav-link">Contato</a>
+        </nav>
+        <a href="#booking" class="btn-header">Agendar Agora</a>
+    </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="barber-container hero-content">
+        <h1>Seu novo ritual de <span>cuidado</span> começa aqui</h1>
+        <p>Barbearia Elite Prime: onde tradição encontra estilo moderno. Agende seu horário e viva uma experiência
+            premium.</p>
+        <div class="hero-btns">
+            <a href="#booking" class="btn-primary">Agendar Horário</a>
+            <a href="https://wa.me/5511966422699?text=Oi%20Eduardo!%20Vi%20sua%20demo%20de%20barbearia%20e%20AMEI%20%F0%9F%98%8D%F0%9F%92%88%20Quero%20muito%20fazer%20um%20projeto%20com%20você!"
+                target="_blank" class="btn-secondary">Falar no WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about">
+    <div class="barber-container about-grid">
+        <div class="about-text">
+            <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                <h2>Sobre a Barbearia</h2>
+                <p>Mais que um corte, uma experiência.</p>
+            </div>
+            <p>Fundada em 2023, a Elite Prime nasceu da necessidade de oferecer um serviço de barbearia que unisse a
+                técnica clássica com as tendências modernas, em um ambiente pensado para o homem contemporâneo.</p>
+            <ul class="highlights">
+                <li><i class='bx bxs-check-circle'></i> Ambiente climatizado e exclusivo</li>
+                <li><i class='bx bxs-check-circle'></i> Profissionais com certificação internacional</li>
+                <li><i class='bx bxs-check-circle'></i> Bebidas cortesia (Cerveja Artesanal & Café)</li>
+                <li><i class='bx bxs-check-circle'></i> Estacionamento gratuito</li>
+            </ul>
+        </div>
+        <div class="about-img">
+            <!-- Prompt IA: "Interior de barbearia moderna, cadeiras de couro marrom vintage, paredes de tijolo escuro, iluminação quente, espelhos com moldura dourada, alta resolução" -->
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Interior da Barbearia">
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="services">
+    <div class="barber-container">
+        <div class="section-title">
+            <h2>Nossos Serviços</h2>
+            <p>Escolha o tratamento ideal para o seu estilo.</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <i class='bx bx-cut' style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3>Corte Masculino</h3>
+                <p>Corte personalizado, lavagem e finalização com produtos premium.</p>
+                <span class="price">R$ 70,00</span>
+                <p><small>Duração: 45 min</small></p>
+                <button class="btn-outline" onclick="selectService('corte')">Selecionar</button>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <i class='bx bx-face' style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3>Barba Completa</h3>
+                <p>Barboterapia com toalha quente, desenho e hidratação.</p>
+                <span class="price">R$ 50,00</span>
+                <p><small>Duração: 30 min</small></p>
+                <button class="btn-outline" onclick="selectService('barba')">Selecionar</button>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <i class='bx bx-star' style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3>Combo Elite</h3>
+                <p>Corte + Barba + Sobrancelha + Bebida cortesia.</p>
+                <span class="price">R$ 110,00</span>
+                <p><small>Duração: 1h 15min</small></p>
+                <button class="btn-outline" onclick="selectService('combo')">Selecionar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Barbers -->
+<section id="barbers" class="barbers">
+    <div class="barber-container">
+        <div class="section-title">
+            <h2>Nossos Profissionais</h2>
+            <p>Os mestres da tesoura e da navalha.</p>
+        </div>
+        <div class="barbers-grid">
+            <!-- Barber 1 -->
+            <div class="barber-card">
+                <!-- Prompt IA: "Retrato de barbeiro homem, 30 anos, barba bem feita, tatuagens no braço, avental de couro, olhando para a câmera, fundo desfocado de barbearia" -->
+                <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Barbeiro Carlos" class="barber-img">
+                <div class="barber-info">
+                    <h3>Carlos "The Blade"</h3>
+                    <span>Especialista em Fades</span>
+                    <p>"Precisão é o meu sobrenome. Seu visual em outro nível."</p>
+                    <button class="btn-outline" onclick="selectBarber('carlos')">Ver Horários</button>
+                </div>
+            </div>
+            <!-- Barber 2 -->
+            <div class="barber-card">
+                <!-- Prompt IA: "Retrato de barbeiro homem, 40 anos, estilo clássico, bigode, camisa social e colete, segurando tesoura, expressão confiante" -->
+                <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Barbeiro André" class="barber-img">
+                <div class="barber-info">
+                    <h3>André Classic</h3>
+                    <span>Cortes Clássicos & Barba</span>
+                    <p>"O clássico nunca morre. Elegância em cada detalhe."</p>
+                    <button class="btn-outline" onclick="selectBarber('andre')">Ver Horários</button>
+                </div>
+            </div>
+            <!-- Barber 3 -->
+            <div class="barber-card">
+                <!-- Prompt IA: "Retrato de barbeiro jovem, 25 anos, estilo moderno, cabelo colorido, piercing, sorrindo, segurando máquina de cortar cabelo" -->
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d6d4e59?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Barbeiro Edu" class="barber-img">
+                <div class="barber-info">
+                    <h3>Edu Style</h3>
+                    <span>Freestyle & Pigmentação</span>
+                    <p>"Arte na cabeça. Vamos criar algo único hoje?"</p>
+                    <button class="btn-outline" onclick="selectBarber('edu')">Ver Horários</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Wizard -->
+<section id="booking" class="booking-section">
+    <div class="barber-container">
+        <div class="section-title">
+            <h2>Agende seu Horário</h2>
+            <p>Rápido, fácil e sem complicações.</p>
+        </div>
+
+        <div class="wizard-container">
+            <div class="wizard-steps">
+                <div class="step-indicator active" id="step-ind-1">1</div>
+                <div class="step-indicator" id="step-ind-2">2</div>
+                <div class="step-indicator" id="step-ind-3">3</div>
+                <div class="step-indicator" id="step-ind-4">4</div>
+            </div>
+
+            <!-- Step 1: Client Info -->
+            <div class="step-content active" id="step-1">
+                <h3>Seus Dados</h3>
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="client-name" class="form-control" placeholder="Ex: João Silva">
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="client-email" class="form-control" placeholder="Ex: joao@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Telefone (WhatsApp)</label>
+                    <input type="tel" id="client-phone" class="form-control" placeholder="(11) 99999-9999">
+                </div>
+                <div class="wizard-actions" style="justify-content: flex-end;">
+                    <button class="btn-primary" onclick="nextStep(1)">Próximo</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Service & Barber -->
+            <div class="step-content" id="step-2">
+                <h3>Escolha o Serviço e Profissional</h3>
+                <div class="form-group">
+                    <label>Serviço</label>
+                    <div class="selection-grid" id="service-selection">
+                        <div class="selection-card" onclick="setService('corte', 70)" id="srv-corte">
+                            <i class='bx bx-cut'></i><br>Corte<br>R$ 70
+                        </div>
+                        <div class="selection-card" onclick="setService('barba', 50)" id="srv-barba">
+                            <i class='bx bx-face'></i><br>Barba<br>R$ 50
+                        </div>
+                        <div class="selection-card" onclick="setService('combo', 110)" id="srv-combo">
+                            <i class='bx bx-star'></i><br>Combo<br>R$ 110
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Barbeiro</label>
+                    <div class="selection-grid" id="barber-selection">
+                        <div class="selection-card" onclick="setBarber('carlos')" id="brb-carlos">Carlos</div>
+                        <div class="selection-card" onclick="setBarber('andre')" id="brb-andre">André</div>
+                        <div class="selection-card" onclick="setBarber('edu')" id="brb-edu">Edu</div>
+                    </div>
+                </div>
+                <div class="wizard-actions">
+                    <button class="btn-secondary" onclick="prevStep(2)">Voltar</button>
+                    <button class="btn-primary" onclick="nextStep(2)">Próximo</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Date & Time -->
+            <div class="step-content" id="step-3">
+                <h3>Data e Horário</h3>
+                <div class="form-group">
+                    <label>Data</label>
+                    <input type="date" id="booking-date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Horários Disponíveis</label>
+                    <div class="time-slots" id="time-slots">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <div class="wizard-actions">
+                    <button class="btn-secondary" onclick="prevStep(3)">Voltar</button>
+                    <button class="btn-primary" onclick="nextStep(3)">Revisar</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Confirmation -->
+            <div class="step-content" id="step-4">
+                <h3>Confirme seu Agendamento</h3>
+                <div class="summary-card">
+                    <div class="summary-row"><span>Cliente:</span> <strong id="sum-name">-</strong></div>
+                    <div class="summary-row"><span>Serviço:</span> <strong id="sum-service">-</strong></div>
+                    <div class="summary-row"><span>Barbeiro:</span> <strong id="sum-barber">-</strong></div>
+                    <div class="summary-row"><span>Data/Hora:</span> <strong id="sum-datetime">-</strong></div>
+                    <div class="summary-row"><span>Total:</span> <strong id="sum-total"
+                            style="color: var(--primary)">-</strong></div>
+                </div>
+                <div class="wizard-actions">
+                    <button class="btn-secondary" onclick="prevStep(4)">Voltar</button>
+                    <button class="btn-primary" onclick="confirmBooking()">Confirmar Agendamento</button>
+                </div>
+            </div>
+
+            <!-- Success Message (Hidden by default) -->
+            <div class="step-content" id="step-success" style="text-align: center;">
+                <i class='bx bx-check-circle' style="font-size: 5rem; color: var(--success); margin-bottom: 20px;"></i>
+                <h3>Agendamento Confirmado!</h3>
+                <p>Obrigado, <span id="success-name"></span>. Seu horário está garantido.</p>
+                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                    <button class="btn-secondary" onclick="addToCalendar()">
+                        <i class='bx bx-calendar-plus'></i> Adicionar ao Calendário
+                    </button>
+                    <button class="btn-primary" onclick="sendWhatsApp()">
+                        <i class='bx bxl-whatsapp'></i> Enviar Detalhes no WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery">
+    <div class="barber-container">
+        <div class="section-title">
+            <h2>Galeria</h2>
+            <p>Nosso trabalho, nosso orgulho.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img
+                    src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Corte Fade"></div>
+            <div class="gallery-item"><img
+                    src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Barba"></div>
+            <div class="gallery-item"><img
+                    src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Ambiente"></div>
+            <div class="gallery-item"><img
+                    src="https://images.unsplash.com/photo-1532710093739-9470acff878f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Ferramentas"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="testimonials">
+    <div class="barber-container">
+        <div class="section-title">
+            <h2>O que dizem nossos clientes</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                        class='bx bxs-star'></i><i class='bx bxs-star'></i></div>
+                <p class="testimonial-text">"Melhor barbearia da cidade. O Carlos manda muito bem no fade. Recomendo
+                    demais!"</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="client-img">
+                    <span><strong>Lucas Mendes</strong></span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                        class='bx bxs-star'></i><i class='bx bxs-star'></i></div>
+                <p class="testimonial-text">"Ambiente sensacional, cerveja gelada e atendimento de primeira. Virei
+                    cliente fiel."</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente" class="client-img">
+                    <span><strong>Roberto Silva</strong></span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                        class='bx bxs-star'></i><i class='bx bxs-star-half'></i></div>
+                <p class="testimonial-text">"Profissionais muito qualificados. O agendamento online facilita muito a
+                    vida."</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Cliente" class="client-img">
+                    <span><strong>Felipe Costa</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+    <div class="barber-container">
+        <div class="section-title">
+            <h2>Perguntas Frequentes</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Preciso agendar com antecedência? <i
+                        class='bx bx-chevron-down'></i></div>
+                <div class="faq-answer">Recomendamos agendar com pelo menos 24h de antecedência para garantir seu
+                    horário preferido, especialmente aos sábados.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Aceitam cartão e PIX? <i
+                        class='bx bx-chevron-down'></i></div>
+                <div class="faq-answer">Sim! Aceitamos todos os cartões de crédito/débito, PIX e dinheiro.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Atendem crianças? <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="faq-answer">Sim, temos profissionais com paciência e experiência para atender o público
+                    infantil com todo cuidado.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+    <div class="barber-container">
+        <div class="section-title">
+            <h2>Onde Estamos</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Visite-nos</h3>
+                <div class="info-row">
+                    <i class='bx bx-map'></i>
+                    <div>
+                        <strong>Endereço:</strong><br>
+                        Av. Paulista, 1000 - Loja 5<br>
+                        Bela Vista, São Paulo - SP
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class='bx bx-time'></i>
+                    <div>
+                        <strong>Horário:</strong><br>
+                        Seg - Sex: 09h às 20h<br>
+                        Sáb: 09h às 18h
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class='bx bx-phone'></i>
+                    <div>
+                        <strong>Contato:</strong><br>
+                        (11) 99999-9999<br>
+                        contato@eliteprime.com
+                    </div>
+                </div>
+            </div>
+            <div class="map-placeholder">
+                <i class='bx bx-map-alt' style="font-size: 3rem; margin-right: 10px;"></i> Mapa do Google (Simulação)
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="barber-container">
+        <div class="logo" style="font-size: 1.5rem;">Elite<span style="color: #fff">Prime</span></div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/eduardoazevedo.dev/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61583914455032"><i class='bx bxl-facebook'></i></a>
+            <a
+                href="https://wa.me/5511966422699?text=Oi%20Eduardo!%20Vi%20sua%20demo%20de%20barbearia%20e%20AMEI%20%F0%9F%98%8D%F0%9F%92%88%20Quero%20muito%20fazer%20um%20projeto%20com%20você!"><i
+                    class='bx bxl-whatsapp'></i></a>
+        </div>
+        <p style="color: #666; font-size: 0.8rem;">&copy; 2025 Barbearia Elite Prime. Todos os direitos reservados <a
+                href="/" style="text-decoration: underline;">Eduardo Azevedo</a>.</p>
+        <p style="color: #444; font-size: 0.7rem; margin-top: 10px;">Este é um site DEMO criado por Eduardo Azevedo.</p>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/5511966422699?text=Oi%20Eduardo!%20Vi%20sua%20demo%20de%20barbearia%20e%20AMEI%20%F0%9F%98%8D%F0%9F%92%88%20Quero%20muito%20fazer%20um%20projeto%20com%20você!"
+    target="_blank" class="whatsapp-float">
+    <i class='bx bxl-whatsapp'></i>
+</a>
+
+<script>
+    // State
+    const bookingData = {
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        servicePrice: 0,
+        barber: '',
+        date: '',
+        time: ''
+    };
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+        // Set min date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('booking-date').min = today;
+
+        // Generate Time Slots
+        generateTimeSlots();
+    });
+
+    function generateTimeSlots() {
+        const container = document.getElementById('time-slots');
+        container.innerHTML = '';
+        const start = 9;
+        const end = 19;
+
+        for (let i = start; i < end; i++) {
+            const hour = i < 10 ? '0' + i : i;
+
+            // :00
+            createSlot(container, hour + ':00');
+            // :30
+            createSlot(container, hour + ':30');
+        }
+    }
+
+    function createSlot(container, time) {
+        const div = document.createElement('div');
+        div.className = 'time-slot';
+        div.innerText = time;
+        div.onclick = () => selectTime(div, time);
+
+        // Mock occupied slots
+        if (Math.random() > 0.7) {
+            div.style.opacity = '0.3';
+            div.style.pointerEvents = 'none';
+            div.style.textDecoration = 'line-through';
+        }
+
+        container.appendChild(div);
+    }
+
+    function selectTime(el, time) {
+        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        el.classList.add('selected');
+        bookingData.time = time;
+    }
+
+    // Navigation
+    function nextStep(currentStep) {
+        if (!validateStep(currentStep)) return;
+
+        document.getElementById('step-' + currentStep).classList.remove('active');
+        document.getElementById('step-' + (currentStep + 1)).classList.add('active');
+
+        document.getElementById('step-ind-' + (currentStep + 1)).classList.add('active');
+        document.getElementById('step-ind-' + currentStep).classList.add('completed');
+
+        if (currentStep === 3) updateSummary();
+    }
+
+    function prevStep(currentStep) {
+        document.getElementById('step-' + currentStep).classList.remove('active');
+        document.getElementById('step-' + (currentStep - 1)).classList.add('active');
+
+        document.getElementById('step-ind-' + currentStep).classList.remove('active');
+        document.getElementById('step-ind-' + (currentStep - 1)).classList.remove('completed');
+    }
+
+    function validateStep(step) {
+        if (step === 1) {
+            const name = document.getElementById('client-name').value;
+            const email = document.getElementById('client-email').value;
+            const phone = document.getElementById('client-phone').value;
+
+            if (!name || !email || !phone) {
+                alert('Por favor, preencha todos os campos.');
+                return false;
+            }
+            bookingData.name = name;
+            bookingData.email = email;
+            bookingData.phone = phone;
+        }
+        if (step === 2) {
+            if (!bookingData.service || !bookingData.barber) {
+                alert('Selecione um serviço e um barbeiro.');
+                return false;
+            }
+        }
+        if (step === 3) {
+            const date = document.getElementById('booking-date').value;
+            if (!date || !bookingData.time) {
+                alert('Selecione uma data e um horário.');
+                return false;
+            }
+            bookingData.date = date;
+        }
+        return true;
+    }
+
+    // Selection Logic
+    function setService(service, price) {
+        bookingData.service = service;
+        bookingData.servicePrice = price;
+
+        document.querySelectorAll('#service-selection .selection-card').forEach(c => c.classList.remove('selected'));
+        document.getElementById('srv-' + service).classList.add('selected');
+    }
+
+    function setBarber(barber) {
+        bookingData.barber = barber;
+
+        document.querySelectorAll('#barber-selection .selection-card').forEach(c => c.classList.remove('selected'));
+        document.getElementById('brb-' + barber).classList.add('selected');
+    }
+
+    // External Triggers
+    function selectService(service) {
+        // Scroll to booking
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        // Pre-select
+        // Reset wizard if needed or just set data
+        // For simplicity, we just set the data and assume user starts wizard
+        if (service === 'corte') setService('corte', 70);
+        if (service === 'barba') setService('barba', 50);
+        if (service === 'combo') setService('combo', 110);
+    }
+
+    function selectBarber(barber) {
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        setBarber(barber);
+    }
+
+    // Summary
+    function updateSummary() {
+        document.getElementById('sum-name').innerText = bookingData.name;
+
+        let serviceName = '';
+        if (bookingData.service === 'corte') serviceName = 'Corte Masculino';
+        if (bookingData.service === 'barba') serviceName = 'Barba Completa';
+        if (bookingData.service === 'combo') serviceName = 'Combo Elite';
+        document.getElementById('sum-service').innerText = serviceName;
+
+        let barberName = '';
+        if (bookingData.barber === 'carlos') barberName = 'Carlos';
+        if (bookingData.barber === 'andre') barberName = 'André';
+        if (bookingData.barber === 'edu') barberName = 'Edu';
+        document.getElementById('sum-barber').innerText = barberName;
+
+        // Format Date
+        const dateObj = new Date(bookingData.date);
+        const dateStr = dateObj.toLocaleDateString('pt-BR');
+        document.getElementById('sum-datetime').innerText = dateStr + ' às ' + bookingData.time;
+
+        document.getElementById('sum-total').innerText = 'R$ ' + bookingData.servicePrice + ',00';
+    }
+
+    // Confirm
+    function confirmBooking() {
+        document.getElementById('step-4').classList.remove('active');
+        document.getElementById('step-success').classList.add('active');
+        document.getElementById('success-name').innerText = bookingData.name;
+
+        // Mark all steps completed
+        document.getElementById('step-ind-4').classList.add('completed');
+    }
+
+    // Actions
+    function addToCalendar() {
+        alert('Simulação: Evento adicionado ao seu calendário!');
+    }
+
+    function sendWhatsApp() {
+        const text = `Olá, sou ${bookingData.name}. Agendei um ${bookingData.service} com ${bookingData.barber} para dia ${bookingData.date} às ${bookingData.time}.`;
+        const url = `https://wa.me/5511966422699?text=Oi%20Eduardo!%20Vi%20sua%20demo%20de%20barbearia%20e%20AMEI%20%F0%9F%98%8D%F0%9F%92%88%20Quero%20muito%20fazer%20um%20projeto%20com%20você!
+`;
+        window.open(url, '_blank');
+    }
+
+    // FAQ
+    function toggleFaq(el) {
+        el.parentElement.classList.toggle('active');
+    }
+</script>

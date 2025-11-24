@@ -1,0 +1,38 @@
+{{>demo-nav}}
+<div class="min-h-screen bg-slate-950 text-slate-100">
+    <style>
+        /* Force container to be full width and center app */
+        .container {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        html, body { overflow-x: hidden; }
+        #root { max-width: 1400px; width: 100%; margin: 0 auto; padding: 16px 16px 48px; }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        flux: {
+                            500: '#7C3AED',
+                            600: '#5B21B6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <div id="root" class="pt-6 pb-16 px-4 md:px-8 mx-auto">
+        <div class="text-center text-slate-400 py-10">Carregando Flux IA Chatbot...</div>
+    </div>
+
+    <script type="text/babel" src="/js/demo-chatbot-react.js"></script>
+</div>

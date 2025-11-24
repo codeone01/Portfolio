@@ -1,0 +1,166 @@
+<div class="presentation-container">
+    <header class="presentation-header">
+        <h1>{{demoTitle}}</h1>
+        <p class="subtitle">{{demoDescription}}</p>
+        <a href="{{demoLink}}" class="btn-test-demo">Testar Demo <i class='bx bx-play-circle'></i></a>
+    </header>
+
+    <section class="presentation-showcase">
+        <div class="browser-mockup">
+            <div class="browser-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <img src="{{demoImage}}" alt="{{demoTitle}} Screenshot" class="demo-screenshot">
+        </div>
+    </section>
+
+    <section class="presentation-features">
+        <h2>Principais Funcionalidades</h2>
+        <div class="features-grid">
+            {{#each features}}
+            <div class="feature-card">
+                <i class='{{this.icon}}'></i>
+                <h3>{{this.title}}</h3>
+                <p>{{this.desc}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</div>
+
+<style>
+    /* Inline styles for presentation page to ensure it matches main site feel immediately */
+    .presentation-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+    }
+
+    .presentation-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .presentation-header h1 {
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+
+    .subtitle {
+        font-size: 1.6rem;
+        color: #fff;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-test-demo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #B50AD4;
+        color: white;
+        padding: 1rem 2.8rem;
+        border-radius: 4rem;
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-decoration: none;
+        transition: .5s ease;
+        box-shadow: 0 0 1rem #B50AD4;
+        letter-spacing: 0.1rem;
+    }
+
+    .btn-test-demo:hover {
+        box-shadow: none;
+        background: #B50AD4;
+        color: #1f242d;
+    }
+
+    .browser-mockup {
+        background: #323946;
+        border-radius: 10px;
+        box-shadow: 0 0 1rem #1f242d;
+        overflow: hidden;
+        margin-bottom: 4rem;
+        border: 1px solid #1f242d;
+    }
+
+    .browser-header {
+        background: #1f242d;
+        padding: 10px 15px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .dot.red {
+        background: #fc8181;
+    }
+
+    .dot.yellow {
+        background: #f6e05e;
+    }
+
+    .dot.green {
+        background: #68d391;
+    }
+
+    .demo-screenshot {
+        width: 100%;
+        display: block;
+    }
+
+    .presentation-features h2 {
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .feature-card {
+        background: #323946;
+        padding: 3rem 2rem;
+        border-radius: 2rem;
+        border: .2rem solid #1f242d;
+        transition: .5s ease;
+        text-align: center;
+    }
+
+    .feature-card:hover {
+        border-color: #B50AD4;
+        transform: scale(1.02);
+    }
+
+    .feature-card i {
+        font-size: 5rem;
+        color: #B50AD4;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 2.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+</style>

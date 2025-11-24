@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="logo" href="../../public/img/perfilhexa.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/{{style}}">
+    <style>
+        /* remove container default padding/margin for demos full-width */
+        .container {
+            max-width: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* hide floating whatsapp for demos */
+        .floating-whatsapp {
+            display: none !important;
+        }
+
+        /* full width body */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+    <title>Eduardo Azevedo Portfolio</title>
+</head>
+
+<body>
+    <div class="container">
+        {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+        {{else}}
+
+        {{/if}}
+        {{>_msg}}
+        {{{body}}}
+    </div>
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511966422699?text=Ol%C3%A1%20👋%20quero%20solicitar%20um%20or%C3%A7amento%20personalizado%20para%20o%20meu%20neg%C3%B3cio%20💼%0AVi%20seu%20site%20e%20gostei%20muito%20das%20solu%C3%A7%C3%B5es!%20🚀"
+        class="floating-whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/7feb12d556.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+
+            if (params.get('sent') === '1') {
+                alert('Mensagem enviada com sucesso! ✅');
+            } else if (params.get('error') === '1') {
+                alert('Não foi possível enviar sua mensagem. Tente novamente mais tarde.');
+            }
+
+            // Remove os parâmetros da URL depois de mostrar o popup
+            if (params.get('sent') === '1' || params.get('error') === '1') {
+                window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+            }
+        })();
+    </script>
+
+    {{#if script}}
+    <script src="/js/{{script}}" defer></script>
+    {{/if}}
+</body>
+
+</html>

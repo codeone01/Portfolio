@@ -1,0 +1,55 @@
+{{>demo-nav}}
+<div class="ecom-shell">
+    <header class="topbar compact">
+        <div class="brand-area">
+            <a href="/demo/ecommerce/live" class="brand-logo">Aurora<span>Shop</span></a>
+            <span class="brand-badge">Demo</span>
+        </div>
+        <form class="search-bar" id="search-form">
+            <i class='bx bx-search'></i>
+            <input type="search" id="search-input" placeholder="Buscar produtos" autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="top-actions">
+            <button class="icon-btn js-open-favorites" title="Favoritos">
+                <i class='bx bx-heart'></i>
+                <span class="pill" id="fav-count">0</span>
+            </button>
+            <a class="icon-btn" href="/demo/ecommerce/cart" title="Carrinho">
+                <i class='bx bx-cart'></i>
+                <span class="pill" id="cart-count">0</span>
+            </a>
+            <a class="account-btn" href="/demo/ecommerce/login">
+                <i class='bx bx-user-circle'></i>
+                <span id="account-label">Minha Conta</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="section cart-page">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">Carrinho</p>
+                <h2>Itens selecionados</h2>
+            </div>
+            <a class="link" href="/demo/ecommerce/live#promos">Continuar comprando</a>
+        </div>
+        <div class="cart-layout">
+            <div class="cart-items" id="cart-items">
+                <!-- itens via JS -->
+                <div class="empty">Seu carrinho está vazio. Adicione um produto para continuar.</div>
+            </div>
+            <div class="card summary-card">
+                <p class="eyebrow">Resumo</p>
+                <h3>Totais estimados</h3>
+                <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">R$ 0,00</span></div>
+                <div class="summary-row"><span>Frete</span><span id="summary-frete">Grátis</span></div>
+                <div class="summary-row"><span>Descontos</span><span id="summary-discount">R$ 0,00</span></div>
+                <div class="divider"></div>
+                <div class="summary-total"><span>Total</span><strong id="summary-total">R$ 0,00</strong></div>
+                <a class="btn primary full" href="/demo/ecommerce/checkout">Finalizar compra</a>
+                <p class="note">Simulação: ajustes e quantidades ficam salvos no localStorage.</p>
+            </div>
+        </div>
+    </section>
+</div>

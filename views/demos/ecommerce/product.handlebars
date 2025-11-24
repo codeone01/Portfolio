@@ -1,0 +1,101 @@
+{{>demo-nav}}
+<div class="ecom-shell">
+    <header class="topbar compact">
+        <div class="brand-area">
+            <a href="/demo/ecommerce/live" class="brand-logo">Aurora<span>Shop</span></a>
+            <span class="brand-badge">Demo</span>
+        </div>
+        <form class="search-bar" id="search-form">
+            <i class='bx bx-search'></i>
+            <input type="search" id="search-input" placeholder="Buscar outros produtos" autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="top-actions">
+            <button class="icon-btn js-open-favorites" title="Favoritos">
+                <i class='bx bx-heart'></i>
+                <span class="pill" id="fav-count">0</span>
+            </button>
+            <a class="icon-btn" href="/demo/ecommerce/cart" title="Carrinho">
+                <i class='bx bx-cart'></i>
+                <span class="pill" id="cart-count">0</span>
+            </a>
+            <a class="account-btn" href="/demo/ecommerce/login">
+                <i class='bx bx-user-circle'></i>
+                <span id="account-label">Minha Conta</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="product-detail">
+        <div class="gallery">
+            <div class="hero-img" style="background-image:url('{{product.image}}')"></div>
+            <div class="thumbs">
+                {{#each product.gallery}}
+                <button class="thumb" style="background-image:url('{{this}}')" aria-label="Ver imagem"></button>
+                {{/each}}
+            </div>
+        </div>
+        <div class="detail-copy">
+            <p class="eyebrow">{{product.categoryLabel}}</p>
+            <h1>{{product.name}}</h1>
+            <div class="rating"><i class='bx bxs-star'></i> {{product.rating}} ({{product.reviews}} avaliações)</div>
+            <div class="price-row">
+                <span class="price">R$ {{product.price}}</span>
+                <span class="old">R$ {{product.priceOld}}</span>
+                <span class="flag">{{product.badge}}</span>
+            </div>
+            <p class="description">{{product.description}}</p>
+            <ul class="specs">
+                {{#each product.specs}}
+                <li><i class='bx bx-check'></i> {{this}}</li>
+                {{/each}}
+            </ul>
+            <div class="product-cta">
+                <div class="qty">
+                    <button class="js-qty" data-dir="-1">-</button>
+                    <input type="number" value="1" min="1" id="detail-qty">
+                    <button class="js-qty" data-dir="1">+</button>
+                </div>
+                <button class="btn primary js-add-cart" data-product-id="{{product.id}}">Adicionar ao carrinho</button>
+                <button class="btn ghost js-fav-toggle" data-product-id="{{product.id}}"><i class='bx bx-heart'></i> Favoritar</button>
+            </div>
+            <div class="payment-hint">
+                <p><i class='bx bx-credit-card'></i> Teste com cartão fictício 4111 1111 1111 1111</p>
+                <p><i class='bx bx-lock'></i> Checkout simulado e seguro para demo</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">Sugestões</p>
+                <h2>Produtos relacionados</h2>
+            </div>
+            <a class="link" href="/demo/ecommerce/live#promos">Voltar para promoções</a>
+        </div>
+        <div class="grid products-grid" id="related-grid">
+            {{#each relatedProducts}}
+            <article class="product-card" data-product-id="{{id}}">
+                <div class="card-img" style="background-image:url('{{image}}')">
+                    <button class="fav-btn js-fav-toggle" data-product-id="{{id}}"><i class='bx bx-heart'></i></button>
+                    <span class="flag">{{badge}}</span>
+                </div>
+                <div class="card-body">
+                    <p class="meta">{{categoryLabel}}</p>
+                    <h3>{{name}}</h3>
+                    <div class="price-row">
+                        <span class="price">R$ {{price}}</span>
+                        <span class="old">R$ {{priceOld}}</span>
+                    </div>
+                    <div class="rating"><i class='bx bxs-star'></i> {{rating}} ({{reviews}})</div>
+                    <div class="card-actions">
+                        <button class="btn ghost js-add-cart" data-product-id="{{id}}"><i class='bx bx-cart'></i> Adicionar</button>
+                        <a class="btn link-btn" href="/demo/ecommerce/product/{{id}}">Ver</a>
+                    </div>
+                </div>
+            </article>
+            {{/each}}
+        </div>
+    </section>
+</div>

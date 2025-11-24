@@ -1,0 +1,41 @@
+{{>demo-nav}}
+<div class="ecom-shell">
+    <header class="topbar compact">
+        <div class="brand-area">
+            <a href="/demo/ecommerce/live" class="brand-logo">Aurora<span>Shop</span></a>
+            <span class="brand-badge">Demo</span>
+        </div>
+        <form class="search-bar" id="search-form">
+            <i class='bx bx-search'></i>
+            <input type="search" id="search-input" placeholder="Buscar produtos" autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="top-actions">
+            <a class="icon-btn" href="/demo/ecommerce/favoritos" title="Favoritos">
+                <i class='bx bx-heart'></i>
+                <span class="pill" id="fav-count">0</span>
+            </a>
+            <a class="icon-btn" href="/demo/ecommerce/cart" title="Carrinho">
+                <i class='bx bx-cart'></i>
+                <span class="pill" id="cart-count">0</span>
+            </a>
+            <a class="account-btn" href="/demo/ecommerce/login">
+                <i class='bx bx-user-circle'></i>
+                <span id="account-label">Minha Conta</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="section highlight">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">Wishlist</p>
+                <h2>Meus favoritos</h2>
+            </div>
+            <button class="btn ghost js-clear-favs">Limpar favoritos</button>
+        </div>
+        <div class="grid products-grid" id="favorites-grid">
+            <div class="empty">Nenhum favorito ainda. Clique no coração em qualquer produto.</div>
+        </div>
+    </section>
+</div>

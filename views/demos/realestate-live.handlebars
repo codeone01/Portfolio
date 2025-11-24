@@ -1,0 +1,30 @@
+{{>demo-nav}}
+<div class="min-h-screen bg-slate-50">
+    <style>
+        /* Force container to be full width */
+        .container {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Ensure root takes full width but respects max-width if needed by the app design, 
+           or let the app handle it. For now, we reset margins. */
+        #root {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <!-- React App Assets -->
+    <link rel="stylesheet" crossorigin href="/demos/realestate/assets/index-DScvY8fo.css">
+    <div id="root"></div>
+    <script type="module" crossorigin src="/demos/realestate/assets/index-4cCTlBcR.js"></script>
+</div>

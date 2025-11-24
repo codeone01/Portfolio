@@ -1,0 +1,134 @@
+.realestate-theme {
+    font-family: 'Lato', sans-serif;
+    background: #fdfdfd;
+    min-height: 100vh;
+}
+
+.re-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #eee;
+}
+
+.re-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.search-bar {
+    display: flex;
+    background: #f5f5f5;
+    padding: 5px 15px;
+    border-radius: 30px;
+    width: 40%;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+.user-actions a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.btn-list {
+    background: #2c3e50;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.filters {
+    padding: 20px 5%;
+    display: flex;
+    gap: 15px;
+}
+
+.filters button,
+.filters select {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filters button.active {
+    background: #2c3e50;
+    color: #fff;
+    border-color: #2c3e50;
+}
+
+.listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 5%;
+}
+
+.listing-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+}
+
+.img-wrapper {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.info {
+    padding: 20px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.address {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    color: #7f8c8d;
+    font-size: 13px;
+}

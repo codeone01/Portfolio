@@ -1,0 +1,154 @@
+{{>demo-nav}}
+<div class="ecom-shell">
+    <header class="topbar">
+        <div class="brand-area">
+            <a href="/demo/ecommerce/live" class="brand-logo">Aurora<span>Shop</span></a>
+            <span class="brand-badge">Demo</span>
+        </div>
+        <form class="search-bar" id="search-form">
+            <i class='bx bx-search'></i>
+            <input type="search" id="search-input" placeholder="Buscar por produto, categoria ou código" autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="top-actions">
+            <button class="icon-btn js-open-favorites" title="Favoritos">
+                <i class='bx bx-heart'></i>
+                <span class="pill" id="fav-count">0</span>
+            </button>
+            <a class="icon-btn" href="/demo/ecommerce/cart" title="Carrinho">
+                <i class='bx bx-cart'></i>
+                <span class="pill" id="cart-count">0</span>
+            </a>
+            <a class="account-btn" href="/demo/ecommerce/login">
+                <i class='bx bx-user-circle'></i>
+                <span id="account-label">Entrar / Minha Conta</span>
+            </a>
+        </div>
+    </header>
+
+    <nav class="subnav">
+        <a href="#hero">Home</a>
+        <a href="/demo/ecommerce/products">Produtos</a>
+        <a href="#categorias">Categorias</a>
+        <a href="/demo/ecommerce/favoritos">Favoritos</a>
+        <a href="/demo/ecommerce/checkout">Checkout</a>
+        <a href="/demo/ecommerce/login">Minha Conta</a>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">Lançamentos 2025</p>
+            <h1>Seu e-commerce completo, pronto para testar e usar agora.</h1>
+            <p class="lede">Fluxos reais de navegação, favoritos, carrinho, checkout e histórico de pedidos simulados em uma única demo.</p>
+            <div class="hero-cta">
+                <a class="btn primary" href="#promos">Ver promoções</a>
+                <a class="btn ghost" href="#categorias">Explorar categorias</a>
+            </div>
+            <div class="hero-perks">
+                <span><i class='bx bx-package'></i> Entregas em todo o Brasil</span>
+                <span><i class='bx bx-credit-card'></i> Cartão, Pix e Boleto</span>
+                <span><i class='bx bx-check-shield'></i> Compra 100% segura</span>
+            </div>
+        </div>
+        <div class="hero-carousel">
+            <div class="slide active" style="--bg:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80')">
+                <div class="slide-copy">
+                    <span>Promoções relâmpago</span>
+                    <strong>até 30% OFF em áudio premium</strong>
+                </div>
+            </div>
+            <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80')">
+                <div class="slide-copy">
+                    <span>Lançamentos</span>
+                    <strong>Wearables com entrega expressa</strong>
+                </div>
+            </div>
+            <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1582719478185-1f1593c6940b?auto=format&fit=crop&w=1400&q=80')">
+                <div class="slide-copy">
+                    <span>Gaming</span>
+                    <strong>Setups completos com cashback</strong>
+                </div>
+            </div>
+            <div class="dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div><i class='bx bx-world'></i> Frete grátis Sul/Sudeste acima de R$299</div>
+        <div><i class='bx bx-transfer'></i> Troca fácil em 30 dias</div>
+        <div><i class='bx bx-credit-card'></i> 10x sem juros no cartão</div>
+        <div><i class='bx bx-shield'></i> Checkout seguro criptografado</div>
+    </section>
+
+    <section class="section" id="categorias">
+        <header class="section-head">
+            <div>
+                <p class="eyebrow">Navegue por tema</p>
+                <h2>Categorias</h2>
+            </div>
+            <a href="#categorias" class="link">Ver todas</a>
+        </header>
+        <div class="grid categories-grid" id="categories-grid">
+            <!-- preenchido via JS -->
+        </div>
+    </section>
+
+    <section class="section" id="promos">
+        <header class="section-head">
+            <div>
+                <p class="eyebrow">Oferta do dia</p>
+                <h2>Promoções</h2>
+            </div>
+            <a href="#checkout" class="link">Ir para checkout</a>
+        </header>
+        <div class="grid products-grid" id="promo-grid">
+            <!-- produtos via JS -->
+        </div>
+    </section>
+
+    <section class="section" id="mais-vendidos">
+        <header class="section-head">
+            <div>
+                <p class="eyebrow">Escolhas da comunidade</p>
+                <h2>Mais vendidos</h2>
+            </div>
+            <a href="#favoritos" class="link">Adicionar aos favoritos</a>
+        </header>
+        <div class="grid products-grid" id="bestsellers-grid"></div>
+    </section>
+
+    <section class="section highlight" id="favoritos">
+        <header class="section-head">
+            <div>
+                <p class="eyebrow">Wishlist</p>
+                <h2>Meus Favoritos</h2>
+            </div>
+            <a class="btn ghost" href="/demo/ecommerce/favoritos">Gerenciar favoritos</a>
+        </header>
+        <div class="grid products-grid" id="favorites-grid">
+            <div class="empty">Nenhum favorito ainda. Clique no coração ou acesse a página de favoritos.</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <div class="brand-logo">Aurora<span>Shop</span></div>
+            <p>E-commerce demo completo com navegação, favoritos, carrinho e checkout fictício.</p>
+        </div>
+        <div class="footer-links">
+            <a href="/demo/ecommerce/live">Home</a>
+            <a href="/demo/ecommerce/products">Produtos</a>
+            <a href="/demo/ecommerce/favoritos">Favoritos</a>
+            <a href="/demo/ecommerce/checkout">Checkout</a>
+            <a href="/demo/ecommerce/login">Minha Conta</a>
+        </div>
+        <div class="footer-meta">
+            <span><i class='bx bx-lock'></i> Pagamento seguro</span>
+            <span><i class='bx bx-support'></i> Suporte 24/7 (demo)</span>
+        </div>
+    </footer>
+</div>

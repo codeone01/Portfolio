@@ -1,0 +1,35 @@
+/* Reset leve para não conflitar com Tailwind e garantir largura total */
+:root {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+}
+
+html,
+body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto !important;
+    padding: 16px 16px 48px;
+}
+
+.demo-container,
+.chat-interface {
+    all: unset;
+}
